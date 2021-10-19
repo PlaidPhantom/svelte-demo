@@ -104,6 +104,13 @@ function instance($$self, $$props, $$invalidate) {
 
 [SvelteKit](https://kit.svelte.dev/) is a full application framework centered around Svelte. It provides filesystem-based routing as well as server-side rendering. SvelteKit uses various "adapters" to build the application for different hosted environments:
 
+```shell
+npm init svelte@next my-app
+cd my-app
+npm install
+npm run dev -- --open
+```
+
 Currently provided adapters:
 
 * Static website
