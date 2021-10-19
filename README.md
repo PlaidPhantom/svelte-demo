@@ -123,7 +123,7 @@ Currently provided adapters:
 
 ## 4. Nativescript
 
-[Svelte Native](https://svelte-native.technology/) is a community-maintained flavor of [NativeScript](https://nativescript.org/), a multi-platform framework for building applications with HTML/CSS/JS that use native UI components (as opposed to rendering HTML in a web view, like Capacitor).
+[Svelte Native](https://svelte-native.technology/) is a community-maintained flavor of [NativeScript](https://nativescript.org/), a multi-platform multi-framework toolkit for building applications with HTML/CSS/JS that use native UI components (as opposed to rendering HTML in a web view, like Capacitor).
 
 ```shell
 npm install -g nativescript
@@ -147,4 +147,4 @@ Svelte is focused on being a front-end UI framework. That means you are free to 
 
 [This Recipe](https://svelte-recipes.netlify.app/testing/) provides useful information on how to load a component programmatically for unit testing.
 
-There are multiple JS libraries that provide
+There are multiple JS libraries that provide DI/IoC containers, and there are Svelte libraries providing SPA routing, forms management and validation.
