@@ -1,6 +1,8 @@
 <script>
 	export let id;
 
+	import { fade } from "svelte/transition";
+
 	import { getTodo, updateCompleted } from "./ListService";
 
 	$: todo = getTodo(id);
@@ -16,7 +18,7 @@
 	}
 </style>
 
-<li>
+<li transition:fade>
 	<label class:completed={$todo.completed}>
 		<input
 			type="checkbox"

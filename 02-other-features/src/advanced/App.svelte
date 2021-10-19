@@ -1,10 +1,17 @@
 <script>
 	import { onMount } from "svelte";
+	import { tweened } from 'svelte/motion';
+	import { cubicOut } from 'svelte/easing';
+
 	import Item from "./Item.svelte";
+
 	import { loadTodos, addTodo, todos } from "./ListService";
 
-	$: numTodos = $todos.length;
-	$: openTodos = $todos.filter((i) => !i.completed).length;
+	var progress = tweened(0, { duration: 1000, easing: cubicOut });
+
+	$: {
+		progress.set($todos.filter((i) => i.completed).length / $todos.length || 0);
+	}
 
 	let newItem = "";
 
@@ -29,7 +36,7 @@
 			src="./circle-notch-solid.svg"
 			alt="Please wait..." />
 	{:else}
-		<p>Showing {numTodos}, {openTodos} are currently open.</p>
+		<progress value={$progress} />
 		<ul>
 			{#each $todos as { id }}
 				<Item {id} />
