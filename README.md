@@ -31,7 +31,7 @@ This component code:
 	let name = "World";
 
 	function reset() {
-	  name = "World";
+		name = "World";
 	}
 </script>
 
@@ -46,7 +46,7 @@ This component code:
 
 becomes (omitting boilerplate):
 
-```
+```j s
 
 function create_fragment(ctx) {
 	const block = {
@@ -90,11 +90,15 @@ function instance($$self, $$props, $$invalidate) {
 
 ## 2. Other Features
 
+* simple syntax based on HTML & JS (with some $$ thrown in)
 * reactivity (expressions & variables)
-* built in transitions
-* components
+* Components
 	* just uses JS import
 	* props
+* Stores
+	* basic implementation of the "observable" pattern, such as is found in RxJS
+	* Svelte accepts anything with a `.subscribe(val => {})` method, so RxJS observables will actually work!
+*
 
 ## 3. SvelteKit
 
