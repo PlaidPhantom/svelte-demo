@@ -13,9 +13,9 @@ body {
 }
 
 main {
-  text-align: center;
+  text-align: left;
   padding: 1em;
-  max-width: 240px;
+  max-width: 600px;
   margin: 0 auto;
 }
 
@@ -24,12 +24,6 @@ h1 {
   text-transform: uppercase;
   font-size: 4em;
   font-weight: 100;
-}
-
-@media (min-width: 640px) {
-  main {
-	max-width: none;
-  }
 }
 
 a {

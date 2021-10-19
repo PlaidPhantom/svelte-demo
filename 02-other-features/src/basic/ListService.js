@@ -8,7 +8,7 @@ export async function getTodos() {
 */
 
 function sleep(ms) {
-	return new Promise((resolve, reject) => {
+	return new Promise((resolve, _reject) => {
 		setTimeout(resolve(), ms);
 	})
 }
@@ -16,9 +16,9 @@ function sleep(ms) {
 export async function getTodos() {
 	await sleep(500);
 	return [
-		{ description: 'Item 1', completed: true },
-		{ description: 'Item 2', completed: false },
-		{ description: 'Item 3', completed: false },
-		{ description: 'Item 4', completed: false },
+		{ id: 1, description: 'Item 1', completed: true },
+		{ id: 2, description: 'Item 2', completed: false },
+		{ id: 3, description: 'Item 3', completed: false },
+		{ id: 4, description: 'Item 4', completed: false },
 	];
 }
