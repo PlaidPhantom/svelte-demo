@@ -27,7 +27,7 @@
 <p>Showing {numItems}, {openItems} are currently open.
 
 <ul>
-	{#each items as item }
+	{#each items as item (item.id) }
 		<Item {item} on:completionchange={itemUpdated} />
 	{/each}
 </ul>

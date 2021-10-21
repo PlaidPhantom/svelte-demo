@@ -140,10 +140,12 @@ ns run android
 
 The basic Svelte template includes a script to enable full Typescript support. This is a relatively new effort (within the last year or two), so some dev tooling may not yet be up to speed.
 
-	What about other things Angular provides? e.g. Unit Testing or Dependency Injection
+	What about other things Angular provides? e.g. Unit Testing, Dependency Injection, form validation
 
 Svelte is focused on being a front-end UI framework. That means you are free to (or "have to", depending on your perspective) bring your own testing and/or DI setup.
 
 [This Recipe](https://svelte-recipes.netlify.app/testing/) provides useful information on how to load a component programmatically for unit testing.
 
-There are multiple JS libraries that provide DI/IoC containers, and there are Svelte libraries providing SPA routing, forms management and validation.
+[This Svelte library](https://www.npmjs.com/package/svelte-form-validation) provides form validation using the validation library [Yup](https://github.com/jquense/yup).
+
+There are multiple JS libraries that provide DI/IoC containers (such as [Inversify](https://inversify.io/)).

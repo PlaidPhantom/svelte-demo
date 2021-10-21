@@ -38,8 +38,8 @@
 	{:else}
 		<progress value={$progress} />
 		<ul>
-			{#each $todos as { id }}
-				<Item {id} />
+			{#each $todos as item (item.id)}
+				<Item {item.id} />
 			{/each}
 		</ul>
 
