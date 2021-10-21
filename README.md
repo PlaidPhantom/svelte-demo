@@ -1,21 +1,20 @@
 # A Quick Introduction to Svelte
 
-A short overview of Svelte, its advantages, and ecosystem.
+A short overview of Svelte, its advantages, and ecosystem. Each section (except the first) has a corresponding demo in this repository.
 
-## 0. About
+## 0. About Svelte
 
 * A component-based web UI framework
 * Website: https://svelte.dev/
 * Created by Rich Harris, Graphics Editor @ New York Times
-	* Responsible for all those cool Covid & Olympics Graphics
+	* Responsible for all those cool Election, Covid & Olympics Graphics in the last few years
 		* like [this one](./assets/graphic.mp4)
-* intentionally styled to be very close to plain HTML & JS
-* Moves as much work as possible _out_ of the browser and _into_ the compilation step.
+* Moves as much work as possible _out_ of the browser runtime and _into_ the compilation process.
 * Had the highest satisfaction rating, most interest, and was one of the fastest-growing of any UI framework in the [2020 State of JS survey](https://2020.stateofjs.com/en-US/technologies/front-end-frameworks/).
 
-## 1. The Basics
+## 1. The Basic Idea
 
-basic template: https://github.com/sveltejs/template
+Basic Installation:
 
 ```shell
 npx degit sveltejs/template svelte-app
@@ -24,7 +23,7 @@ npm install
 npm run dev
 ```
 
-This component code:
+Svelte uses component files, and compiles them down to basic javascript. For example, this component:
 
 ```html
 <script>
@@ -91,18 +90,18 @@ function instance($$self, $$props, $$invalidate) {
 ## 2. Other Features
 
 * simple syntax based on HTML & JS (with some $$ thrown in)
-* reactivity (expressions & variables)
+* reactive expressions & variables
 * Components
 	* just uses JS import
-	* props
+	* props & slots
 * Stores
 	* basic implementation of the "observable" pattern, such as is found in RxJS
 	* Svelte accepts anything with a `.subscribe(val => {})` method, so RxJS observables will actually work!
-*
+* Motion & Tweening, Transitions, and Animations
 
 ## 3. SvelteKit
 
-[SvelteKit](https://kit.svelte.dev/) is a full application framework centered around Svelte. It provides filesystem-based routing as well as server-side rendering. SvelteKit uses various "adapters" to build the application for different hosted environments:
+[SvelteKit](https://kit.svelte.dev/) is a full application framework centered around Svelte. It provides filesystem-based routing as well as server-side rendering (including server-side API calls). SvelteKit uses various "adapters" to build the application for different hosted environments.
 
 ```shell
 npm init svelte@next my-app
