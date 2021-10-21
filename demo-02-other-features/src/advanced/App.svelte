@@ -7,7 +7,7 @@
 
 	import { loadTodos, addTodo, todos } from "./ListService";
 
-	var progress = tweened(0, { duration: 1000, easing: cubicOut });
+	let progress = tweened(0, { duration: 1000, easing: cubicOut });
 
 	$: {
 		progress.set($todos.filter((i) => i.completed).length / $todos.length || 0);
