@@ -1,7 +1,7 @@
 <script>
 	import { onMount } from "svelte";
-	import { tweened } from 'svelte/motion';
-	import { cubicOut } from 'svelte/easing';
+	import { tweened } from "svelte/motion";
+	import { cubicOut } from "svelte/easing";
 
 	import Item from "./Item.svelte";
 
@@ -10,7 +10,9 @@
 	let progress = tweened(0, { duration: 1000, easing: cubicOut });
 
 	$: {
-		progress.set($todos.filter((i) => i.completed).length / $todos.length || 0);
+		progress.set(
+			$todos.filter((i) => i.completed).length / $todos.length || 0
+		);
 	}
 
 	let newItem = "";
@@ -39,7 +41,7 @@
 		<progress value={$progress} />
 		<ul>
 			{#each $todos as item (item.id)}
-				<Item {item.id} />
+				<Item id={item.id} />
 			{/each}
 		</ul>
 

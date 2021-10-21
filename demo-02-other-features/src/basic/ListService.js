@@ -14,7 +14,7 @@ function sleep(ms) {
 }
 
 export async function getTodos() {
-	await sleep(500);
+	await sleep(5000);
 	return [
 		{ id: 1, description: 'Item 1', completed: true },
 		{ id: 2, description: 'Item 2', completed: false },
