@@ -46,7 +46,7 @@ This component code:
 
 becomes (omitting boilerplate):
 
-```j s
+```js
 
 function create_fragment(ctx) {
 	const block = {
